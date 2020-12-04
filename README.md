@@ -1,12 +1,17 @@
 # Setup
+
+
+## Prerequisites
+```sudo apt install -y curl```
+
 ## MacOS
 ```curl afshawn.org/setup/install | bash -s mac```
 
 ## Linux Server
-```sudo apt install -y curl && curl afshawn.org/setup/install | bash -s linux-server```
+```curl afshawn.org/setup/install | bash -s linux-server```
 
 ## Raspberry Pi
-```sudo apt install -y curl && curl afshawn.org/setup/install | bash -s rpi```
+```curl afshawn.org/setup/install | bash -s rpi```
 
 # Dev
 ```curl afshawn.org/setup/dev-install | bash```

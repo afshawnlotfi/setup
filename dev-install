@@ -4,6 +4,6 @@ git clone git@github.com:$ACCOUNT_NAME/setup.git &&
 cd setup &&
 rm -rf .git/hooks &&
 cp -r hooks .git/hooks &&
-git checkout master &&
+git checkout master
 
 
