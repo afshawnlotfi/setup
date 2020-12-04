@@ -15,3 +15,6 @@
 
 # Dev
 ```curl afshawn.org/setup/dev-install | bash```
+
+# Fix Time
+```curl afshawn.org/setup/fix-time | bash```
