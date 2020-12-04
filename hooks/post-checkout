@@ -1,0 +1,3 @@
+openssl aes-256-cbc -d -a -in private.zip.enc -out private.zip
+unzip private.zip
+rm -rf private.zip

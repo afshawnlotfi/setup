@@ -1,0 +1,14 @@
+#!/bin/bash
+
+OS=$1
+MAIN_BRANCH=master
+REPO_NAME=setup
+ACCOUNT_NAME=afshawnlotfi
+DIR=$REPO_NAME-$MAIN_BRANCH
+
+curl -o $DIR.zip https://codeload.github.com/$ACCOUNT_NAME/$REPO_NAME/zip/master
+unzip $DIR.zip
+rm -rf $DIR.zip
+cd $DIR
+cd $OS
+bash installation.sh

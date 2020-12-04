@@ -1,0 +1,4 @@
+rm -rf private.zip
+zip -r private.zip private &&
+openssl aes-256-cbc -a -salt -in private.zip -out private.zip.enc
+rm -rf private.zip
