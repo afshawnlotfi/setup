@@ -1,11 +1,26 @@
 #!/bin/bash
 
 OS=$1
-ISO_PATH=$2
-DEVICE_NUM=$3
 
-hdiutil convert -format UDRW -o write.img $ISO_PATH
-diskutil unmountDisk /dev/rdisk$DEVICE_NUM
-sudo dd if=write.img.dmg of=/dev/rdisk$DEVICE_NUM bs=1m
+read -p "Enter ISO Path: " ISO_PATH
+SHA256=$(openssl dgst -sha256 $ISO_PATH)
+echo "CHECKSUM $SHA256"
 
-rm -rf write.img
+if [ "$OS" == "mac" ]; then
+    diskutil list
+    read -p "Enter Volume Path: " VOLUME_PATH &&
+    diskutil unmountDisk $VOLUME_PATH &&
+    hdiutil convert -format UDRW -o write.img $ISO_PATH &&
+    sudo dd if=write.img.dmg of=$VOLUME_PATH bs=1m &&
+    rm -rf write.img.dmg 
+    
+elif [ "$OS" == "linux" ]; then
+    lsblk
+    read -p "Enter Volume Path: " VOLUME_PATH &&
+    sudo dd bs=4M if=$ISO_PATH of=$VOLUME_PATH conv=fdatasync
+fi
+
+
+
+
+

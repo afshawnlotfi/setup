@@ -1,22 +1,31 @@
 # Setup
 
-### Prerequisites
-```sudo apt install -y curl```
 
-## MacOS
+
+### MacOS
 ```curl afshawn.org/setup/setup | bash -s mac```
 
-## Linux Server
+### Linux Server
+#### Prerequisites
+```sudo apt install -y curl```
+
 ```curl afshawn.org/setup/setup | bash -s linux-server```
 
-## Raspberry Pi
+### Raspberry Pi
+#### Prerequisites
+```sudo apt install -y curl```
+
 ```curl afshawn.org/setup/setup | bash -s rpi```
 
-# Dev Setup
+## Dev Setup
 ```curl afshawn.org/setup/dev-setup | bash```
 
-# Fix Time
+## Fix Time
 ```curl afshawn.org/setup/fix-time | bash```
 
-# Linux USB
+## Linux USB Flasher
+### MacOS
 ```curl afshawn.org/setup/linux-usb | bash -s mac```
+### Linux
+
+```curl afshawn.org/setup/linux-usb | bash -s linux```
