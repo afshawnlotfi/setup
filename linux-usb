@@ -1,0 +1,11 @@
+#!/bin/bash
+
+OS=$1
+ISO_PATH=$2
+DEVICE_NUM=$3
+
+hdiutil convert -format UDRW -o write.img $ISO_PATH
+diskutil unmountDisk /dev/rdisk$DEVICE_NUM
+sudo dd if=write.img.dmg of=/dev/rdisk$DEVICE_NUM bs=1m
+
+rm -rf write.img

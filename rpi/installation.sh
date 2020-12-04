@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # sudo nano /etc/default/keyboard
 # wpa_passphrase "SSID" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null
 

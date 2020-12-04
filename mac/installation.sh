@@ -1,3 +1,5 @@
+#!/bin/bash
+
 bash ../shared_unix/installation.sh
 
 #Downloading and Installing Homebrew Suite
