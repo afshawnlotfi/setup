@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bash ../shared_unix/installation.sh
+bash ../shared_unix/installation.sh &&
 
 #Downloading and Installing Homebrew Suite
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
