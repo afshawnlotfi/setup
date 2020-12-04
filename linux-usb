@@ -3,12 +3,14 @@
 OS=$1
 
 read -p "Enter ISO Path: " ISO_PATH
+echo "Getting CHECKSUM ..."
 SHA256=$(openssl dgst -sha256 $ISO_PATH)
 echo "CHECKSUM $SHA256"
 
 if [ "$OS" == "mac" ]; then
-    diskutil list
-    read -p "Enter Volume Path: " VOLUME_PATH &&
+    diskutil list &&
+    read -p "Enter RDISK Num: " RDISK_NUM &&
+    VOLUME_PATH=/dev/rdisk$RDISK_NUM
     diskutil unmountDisk $VOLUME_PATH &&
     hdiutil convert -format UDRW -o write.img $ISO_PATH &&
     sudo dd if=write.img.dmg of=$VOLUME_PATH bs=1m &&
@@ -18,8 +20,9 @@ elif [ "$OS" == "linux" ]; then
     lsblk
     read -p "Enter Volume Path: " VOLUME_PATH &&
     sudo dd bs=4M if=$ISO_PATH of=$VOLUME_PATH conv=fdatasync
+else
+    echo "Unknown platform"
 fi
-
 
 
 
