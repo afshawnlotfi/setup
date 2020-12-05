@@ -30,4 +30,4 @@ cp ../private/mac/preferences/com.apple.dock.plist ~/Library/Preferences
 killall Dock
 
 #Shell
-sudo chsh -s (which fish) $USER
+sudo chsh -s $(which fish) $USER
