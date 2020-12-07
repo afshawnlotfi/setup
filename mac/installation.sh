@@ -6,7 +6,7 @@ bash ../shared_unix/installation.sh &&
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 #Downloading and installing necessary desktop apps
-brew cask install visual-studio-code firefox protonvpn postman docker vlc xquartz spotify signal
+brew cask install visual-studio-code firefox protonvpn postman docker vlc xquartz spotify signal blender
 
 #Downloading and installing necessary programs
 brew install fish node yarn openconnect
