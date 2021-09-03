@@ -6,10 +6,10 @@ bash ../shared_unix/installation.sh &&
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 #Downloading and installing necessary desktop apps
-brew install --cask visual-studio-code firefox protonvpn postman docker xquartz spotify vlc
+brew install --cask visual-studio-code firefox protonvpn postman docker ultimaker-cura spotify
 
 #Downloading and installing necessary programs
-brew install fish node yarn openconnect
+brew install fish
 
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
