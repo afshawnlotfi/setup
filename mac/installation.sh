@@ -6,7 +6,7 @@ bash ../shared_unix/installation.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 #Downloading and installing necessary desktop apps
-brew install --cask visual-studio-code firefox protonvpn docker ultimaker-cura spotify vmware-fusion
+brew install --cask visual-studio-code firefox protonvpn docker ultimaker-cura
 
 #Downloading and installing necessary programs
 brew install fish
